@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cat Shop</title>
+    
     <!-- daisy UI link -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
     <!-- tailwind css   cdn-->
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <!-- font awesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- font -->
@@ -15,14 +18,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
 
+    
 
     <style type="text/tailwindcss">
         @theme {
           --font-sora: Sora, serif;
         }        
-        --my-gradient-1{
-            background: linear-gradient(134.71deg, rgb(248, 204, 251) 1.286%,rgb(172, 210, 253) 100%);
+        .my-element {
+        --animate-duration: 1.8s;
         }
+        .my-element-2 {
+        --animate-duration: 1.9s;
+        }
+       
       </style>
 </head>
 <body class="font-sora">
@@ -63,13 +71,13 @@
             <div class=" h-[70vh] md:h-[80vh]  bg-[url(Images/cat-big.png)]  bg-center bg-no-repeat  bg-contain">
                 <div class="pt-16 ">
                     <div class=" text-2xl md:text-3xl font-bold ">
-                        <h1 >Pamper Your Pet, <br> Because They Deserve <br> the Bes</h1>
+                        <h1 class=" animate__animated animate__fadeInLeft" >Pamper Your Pet, <br> Because They Deserve <br> the Bes</h1>
                     </div>
-                    <div class="mt-4 ">
+                    <div class="mt-4 animate__animated animate__fadeInLeft my-element ">
                         <p class="text-stone-500 ">Discover a world of treats, toys, and essentials handpicked for <br> your furry friends. Shop now and make tails wag with joy!</p>
                     </div>
                     
-                    <div class="mt-8">
+                    <div class="mt-8 animate__animated animate__fadeInLeft my-element-2">
                         <button class="btn btn-warning ">Find a pet</button>
                     </div>
                 </div>
@@ -129,7 +137,7 @@
                     </div>
                     <p>3 items</p>
                 </div>
-                <div class="bg-[#F9DF8A] flex flex-col items-center gap-4 py-5 rounded-lg">
+                <div class="bg-[#F9DF8A] flex flex-col items-center gap-4 py-5 rounded-lg ">
                     <div class="bg-[#fff] rounded-full p-5 text-center ">
                         <img src="Images/rabbit-cartoon.png" alt="">
                     </div>
@@ -323,32 +331,84 @@
             </div>
              
         </section>
+        <section class="w-11/12 mx-auto bg-[#E8C4A3] rounded-lg py-10" >
+            <!-- section title -->
+            <div class="text-2xl md:text-3xl font-bold mb-12 px-5">
+                <h1>expensive Pet </h1>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mx-auto px-5">
+                <div class="card bg-base-100  shadow-xl">
+                    <figure>
+                      <img class="w-full"
+                        src="Images/cat-1.jpeg"
+                        alt="" />
+                    </figure>
+                    <div class="card-body">
+                      <h2 class="card-title">Expensive cat-1 </h2>
+                      <p>The most expensive cat breeds is Ashera Cat</p>
+                      <div class="card-actions justify-end">
+                        <button class="btn btn-warning">Buy Now</button>
+                      </div>
+                    </div>
+                </div>
+                <div class="card bg-base-100  shadow-xl">
+                    <figure>
+                      <img class="w-full"
+                        src="Images/cat-1.jpeg"
+                        alt="" />
+                    </figure>
+                    <div class="card-body">
+                      <h2 class="card-title">Expensive cat-2 </h2>
+                      <p>The most expensive cat breeds is Ashera Cat</p>
+                      <div class="card-actions justify-end">
+                        <button class="btn btn-warning">Buy Now</button>
+                      </div>
+                    </div>
+                </div>
+                <div class="card bg-base-100  shadow-xl">
+                    <figure>
+                      <img class="w-full"
+                        src="Images/cat-1.jpeg"
+                        alt="" />
+                    </figure>
+                    <div class="card-body">
+                      <h2 class="card-title">Expensive cat-3 </h2>
+                      <p>The most expensive cat breeds is Ashera Cat</p>
+                      <div class="card-actions justify-end">
+                        <button class="btn btn-warning">Buy Now</button>
+                      </div>
+                    </div>
+                </div>
+                
+            </div>
+              
+         </section>
           <!-- Everyday low Price section start here -->
          <section class="w-11/12 mx-auto mb-96" >
             <!-- section title -->
             <div class="text-2xl md:text-3xl font-bold mt-0 md:mt-32 mb-12">
                 <h1>Everyday low Price</h1>
             </div>
-            <div class="flex sm:flex-col md:flex-row items-center gap-8">
+            <div class="flex flex-col md:flex-row items-center gap-8">
                 <div class=" basis-6/12 md:basis-8/12 mb-8 ">
                     <!-- card -->
                      <div class=" flex justify-between items-center bg-linear-to-r from-purple-200 to-blue-200 rounded-lg p-10 ">
                         <div class="space-y-5">
                             <div>
-                                <p class="font-bold">Under Price</p>
+                                <p class="font-bold hidden  md:flex ">Under Price</p>
                             </div>
-                            <div class="text-3xl font-bold">
+                            <div class="text-2xl font-bold">
                                 <h4 >Pet Grooming Mitt</h4>
                             </div>
                             
                             <div>
-                                <p class=" text-white font-bold">(Easy Hair Removal)</p>
+                                <p class=" text-white font-bold hidden  md:flex ">(Easy Hair Removal)</p>
                             </div>
-                            <div class="text-4xl font-bold">
+                            <div class="text-4xl text-white md:text-black font-bold">
                                 <h1>$7.99</h1>
                             </div>
                         </div>
-                        <div class="w-60">
+                        <div class=" w-40 md:w-60 ">
                             <img src="Images/cute-dog-mid.png" alt="">
                         </div>
                      </div>
@@ -365,7 +425,7 @@
                                 <h1>$7.99</h1>
                             </div>
                         </div>
-                        <div class="w-70">
+                        <div class="w-50 md:w-70">
                             <img src="Images/cute-pet-mid.png" alt="">
                         </div>
                         
@@ -373,15 +433,17 @@
                 </div>
             </div>
         </section>
-
+        
+        
+        
 
     </main>
     <footer>
         <section class="bg-[#FFED93]">
             <!-- footer container -->
-            <div class="w-11/12 mx-auto relative h-80" >
+            <div class="w-11/12 mx-auto relative " >
                 <!-- absolute item container -->
-                <div class=" absolute -top-72 rounded-lg  bg-[#FFF9F4] flex items-center p-20 gap-10 w-full">
+                <div class=" absolute -top-96 md:-top-64 rounded-lg  bg-[#FFF9F4] flex flex-col md:flex-row items-center p-20 gap-10 w-full">
                     <div>
                         <img src="Images/cute-pet-mid.png" alt="">
                     </div>
@@ -403,10 +465,32 @@
                     </div>
                 </div>
                 <!-- footer content -->
-                 <div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                 <div class=" pt-108  pb-20 flex flex-col md:flex-row justify-between ">
+                    <div class="space-y-5">
+                        <div class="flex items-center gap-2">
+                            <img class="text-xl" src="Images/logo-footer.png" alt="Logo">
+                           <div class=" text-xl font-bold hidden  md:flex">
+                            <h1 >Browse<span class="text-orange-300">4</span>Pets</h1>
+                           </div>
+                        </div>
+                        <p class="text-slate-600 ">Discover a world of treats, toys, and essentials handpicked for your furry friends</p>
+                    </div>
+                    <div>
+                        <ul class="space-y-5 ">
+                            <li><a href="">Find a pet</a></li>
+                            <li><a href=""></a>Breeds</li>
+                            <li><a href=""></a>Contact us</li>
+                        </ul>
+                    </div>
+                    <div  class="mt-10">
+                        <p class="font-bold">Follow Us</p>
+                        <div class="flex  gap-3 items-center">
+                            <img src="Images/facebook .png" alt="">
+                            <img src="Images/insta.png" alt="">
+                            <img src="Images/linkdin.png" alt="">
+                            <img src="Images/youtube.png" alt="">
+                        </div>
+                    </div>
                  </div>
 
             </div>
